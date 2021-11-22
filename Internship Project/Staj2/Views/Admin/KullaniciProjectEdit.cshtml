@@ -1,0 +1,126 @@
+﻿@model EntityLayer.Concrete.Proje
+@{
+    ViewData["Title"] = "KullaniciAdminProjectEdit";
+    Layout = "~/Views/Shared/KullaniciAdmin/_KullaniciAdminLogged.cshtml";
+}
+
+
+<section class="cat_product_area section_padding">
+    <div class="container tm-mt-big tm-mb-big">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h2 class="text-center title-text">Edit Project </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-content widget-content-area add-manage-product-2">
+                        <div class="row">
+                            <div class="col-xl-8 col-md-12">
+                                <div class="card card-default">
+                                    <div class="card-body">
+                                        <div class="card-body">
+                                            @using (Html.BeginForm("KullaniciProjectEdit", "Admin", FormMethod.Post, new { @class = "form-horizontal" }))
+                                            {
+                                                <div class="form-group mb-4">
+                                                    <div class="row">
+                                                        <label class="col-md-4">Name :</label>
+                                                        <div class="col-md-8">
+                                                            @Html.TextBoxFor(x => x.projeAdi, new { @class = "form-control", @type = "text" })
+                                                            @Html.ValidationMessageFor(x => x.projeAdi, "", new { @class = "text-danger", })
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                    <div class="row">
+                                                        <label class="col-md-4">Description :</label>
+                                                        <div class="col-md-8">
+                                                            @Html.TextAreaFor(x => x.projeDetaylari, 4, 5, new { @class = "form-control", })
+                                                            @Html.ValidationMessageFor(x => x.projeDetaylari, "", new { @class = "text-danger", })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                    <div class="row">
+                                                        <label class="col-md-4">Category :</label>
+                                                        <div class="col-md-8">
+                                                            @Html.DropDownListFor(x => x.kategoriID, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control ", @placeholder = "@ViewBag.cv.kategoriAdi", })
+                                                            @Html.ValidationMessageFor(x => x.kategoriID, "", new { @class = "text-danger", })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @await Component.InvokeAsync("GereksinimListProje",Model.projeID)
+                                                <div class="form-group mb-4">
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                    <div class="row">
+                                                        <label class="col-md-4">Cost Amount :</label>
+                                                        <div class="col-md-8">
+                                                            <input class="form-control" name="weight" type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                </div>
+                                                <div class="form-group cutom-autocomplete mb-4">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <button type="submit" class="btn btn-primary btn-block text-uppercase">Update Project Now</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-md-12">
+                                <div class="card card-default">                                    
+                                    <div class="card-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group mb-12 upload">
+                                                <input type="file" id="input-file-max-fs" name="resimURL" class="dropify" data-default-file="~/img/@Model.resimURL"  data-max-file-size="2M" />
+                                                <p class="mt-2"><i class="fas fa-cloud-upload-alt"></i> Upload Picture</p>
+                                            </div>
+                                            <script>
+                                                $(document).ready(function () {
+                                                    App.init();
+                                                    FormComponents.init();
+                                                });
+                                            </script>
+                                            <script>
+                                                $('.dropify').dropify({
+                                                    messages: { 'default': 'Click to Upload or Drag n Drop', 'remove': '<i class="flaticon-close-fill"></i>', 'replace': 'Upload or Drag n Drop' }
+                                                });
+                                            </script>
+                                            <div class="form-group mb-4">
+                                            </div>
+                                            <div class="form-group mb-4">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/lib/jquery/dist/jquery.js"></script>

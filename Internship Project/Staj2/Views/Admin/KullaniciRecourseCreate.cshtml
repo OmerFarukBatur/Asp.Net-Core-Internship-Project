@@ -1,0 +1,169 @@
+﻿@model EntityLayer.Concrete.Proje
+@{
+    ViewData["Title"] = "KullaniciRecourseCreate";
+    Layout = "~/Views/Shared/KullaniciAdmin/_KullaniciAdminLogged.cshtml";
+    int id = 1;
+}
+
+
+<section class="cat_product_area section_padding">
+    <div class="container tm-mt-big tm-mb-big">
+        <div class="row">
+            <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto ">
+                <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class=" text-center title-text">Add Recourse</h2>
+                        </div>
+                    </div>
+                    <div class="row tm-edit-product-row">
+                        <div class="col-xl-6 col-lg-6 col-md-12">
+                            @using (Html.BeginForm("KullaniciRecourseCreate", "Admin", FormMethod.Post, new { @class = "form-horizontal" }))
+                            {
+                                <form action="" class="tm-edit-product-form">
+
+                                    <div class="form-group mb-3">
+                                        <div class="row">
+                                            <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                                <label for="category name">Category Name</label>
+                                            </div>
+
+                                            <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                                @Html.DropDownListFor(x => x.kategoriID, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control ", @style = "width:250px;height:45px;", })
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <div class="row">
+                                            <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                                <label for="project name">Project Name</label>
+                                            </div>
+
+                                            <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                                @await Component.InvokeAsync("RecourseCreateProjeName", @id)
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <div class="row">
+                                            <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                                <label for="position name">Position Name</label>
+                                            </div>
+
+                                            <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                                <label for="position level">Position Level</label>
+                                            </div>
+
+                                            <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                                @Html.DropDownListFor(x => x.kategoriID, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control ", @style = "width:200px;height:45px;" })
+
+                                            </div>
+                                            <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                                @Html.DropDownList("Requirement Level", new List<SelectListItem>{
+                                                                           new SelectListItem{ Text="Junior", Value = "1" },
+                                                                           new SelectListItem{ Text="Middle", Value = "2" },
+                                                                           new SelectListItem{ Text="Senior", Value = "3" },},
+                                                                           new { @class = "form-control  ", @name = "gereksinimSeviye1", @style = "width:80px;height:45px", })
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <div class="row">
+                                            <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                                <label for="bid">
+                                                    Bid
+                                                </label>
+                                                <input id="BidId"
+                                                       name="bid"
+                                                       type="text"
+                                                       class="form-control validate"
+                                                       required />
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Recourse Now</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            }
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            // ülke seçildiğinde bu fonksiyon çalışır
+            $('#kategoriID').change(function () {
+                // seçilen ülkenin id sini al
+                var Id = $(this).val();
+
+                @id =parseInt(Id.toString);
+                alert(Id);
+
+                // secilen ülkenin id sini kullanarak Konum controller
+                // sınıfı içerisindeki Sehirler metoduna çağrıda bulunuyoruz.
+                // bu metod dan dönen listeyi kullanarak .each fonksiyonu ile
+                // sehirleri dolduruyoruz...
+@*if (Id != null && Id != '') {
+        $.ajax({
+            type: "post",
+            url: '@Url.Action("Invoke", "KullaniciRecourseCreate")',
+            data: { idd: Id },
+
+            error: function () {
+                // bu kısımda eğer ajax işlemi başarısız ise
+                // hata mesajı verebiliriz.
+                alert("Hata");
+            },
+            beforeSend: function () {
+                // bu kısımda form postalanmadan önce yapılacak
+                // işler belirlenebilir. mesela postalama başladığı
+                // anda loading resmi görüntüleyebiliriz.
+            },
+            complete: function () {
+                // bu kısımda form postalandıktan sonra yapılacak
+                // işler belirlenebilir. mesela postalama bittiği
+                // anda loading resmi gizleyebiliriz.
+            }
+        });
+    }*@
+});
+        });
+</script>
+@*
+    <script type="text/javascript">
+        function A() {
+            $(document).ready(function () {
+                // ülke seçildiğinde bu fonksiyon çalışır
+                $('#kategoriID').change(function () {
+                    // seçilen ülkenin id sini al
+                    var Id = $(this).val();
+                });
+            });
+        }
+    </script>*@

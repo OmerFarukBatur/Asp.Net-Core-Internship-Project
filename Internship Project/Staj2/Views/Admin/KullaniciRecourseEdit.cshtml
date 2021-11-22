@@ -1,0 +1,105 @@
+﻿@model EntityLayer.Concrete.Basvuru
+@{
+    ViewData["Title"] = "KullaniciRecourseEdit";
+    Layout = "~/Views/Shared/KullaniciAdmin/_KullaniciAdminLogged.cshtml";
+    var sayi = Model.projeID;
+}
+
+
+<section class="cat_product_area section_padding">
+    <div class="container tm-mt-big tm-mb-big">
+        <div class="row">
+            <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto ">
+                <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class=" text-center title-text">Add Recourse</h2>
+                        </div>
+                    </div>
+                    <div class="row tm-edit-product-row">
+                        <div class="col-xl-6 col-lg-6 col-md-12">
+                            @using (Html.BeginForm("KullaniciRecourseCreate", "Admin", FormMethod.Post, new { @class = "form-horizontal" }))
+                            {
+                                <form action="" class="tm-edit-product-form">
+
+                                    <div class="form-group mb-3">
+                                        <div class="row">
+                                            <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                                <label for="category name">Category Name</label>
+                                            </div>
+
+                                            <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                                @await Component.InvokeAsync("RecourseEditKategori", @sayi)
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group mb-3">
+                                        <div class="row">
+                                            <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                                <label for="project name">Project Name</label>
+                                            </div>
+
+                                            <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                                @Html.TextBoxFor(x => x.projeAdi, new { @class = "form-control", @type = "text" })
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <div class="row">
+                                            <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                                <label for="position name">Position Name</label>
+                                            </div>
+
+                                            <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                                <label for="position level">Position Level</label>
+                                            </div>
+
+                                            <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                                @Html.DropDownListFor(x => x.basvuruID, (List<SelectListItem>)ViewBag.pN, new { @class = "form-control ", @style = "width:200px;height:45px;" })
+
+                                            </div>
+                                            <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                                @Html.DropDownList("Requirement Level", new List<SelectListItem>{new SelectListItem{Text=Model.pozisyonSeviyesi,Value=Model.basvuruID.ToString()},
+                                                                           new SelectListItem{ Text="Junior", Value = "1" },
+                                                                           new SelectListItem{ Text="Middle", Value = "2" },
+                                                                           new SelectListItem{ Text="Senior", Value = "3" },},
+                                                                           new { @class = "form-control  ", @name = "gereksinimSeviye1", @style = "width:80px;height:45px", })
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <div class="row">
+                                            <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                                <label for="bid">
+                                                    Bid
+                                                </label>
+                                                @Html.TextBoxFor(x => x.teklif, new { @class = "form-control", @type = "text" })
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Recourse Now</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            }
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

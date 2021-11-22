@@ -1,0 +1,30 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Basvuru>
+
+
+
+<li class="dropdown">
+    <a href="#"><span>Find Jobs</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+        <li class="dropdown">
+            <a href="#"><span>By Category</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li><a href="">@item.Proje.projeAdi</a></li>
+                }
+            </ul>
+        </li>
+        <li><a href="#">son işer</a></li>
+        <li><a href="#">öne çıkan işler</a></li>
+
+    </ul>
+</li>
+
+<li class="dropdown">
+    <a href="#"><span>Get Ideas</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+        <li><a href="">son işer</a></li>
+        <li><a href="">öne çıkan işler</a></li>
+
+    </ul>
+</li>

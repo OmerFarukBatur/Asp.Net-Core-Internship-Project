@@ -1,0 +1,88 @@
+﻿@model EntityLayer.Concrete.Uye
+@{
+    ViewData["Title"] = "KullaniciSignUp";
+    Layout = "~/Views/Shared/KullaniciInterface/_KullaniciLayout.cshtml";
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<section class="cat_product_area section_padding">
+    <div class="container">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                                    <div class="card-body">
+                                        @using (Html.BeginForm("KullaniciSignUp", "Register", FormMethod.Post))
+                                        {
+                                            <!--<form method="post">-->
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        @Html.TextBoxFor(x=>x.uyeAdi,new{ @class= "form-control",  })
+                                                        @Html.ValidationMessageFor(x=>x.uyeAdi, "", new { @class = "text-danger", })
+                                                        @*<input class="form-control" required id="inputFirstName" type="text" placeholder="Enter your first name" name="uyeAdi" />*@
+                                                        <label for="inputFirstName">First name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating">
+                                                        @Html.TextBoxFor(x => x.uyeSoyadi, new { @class = "form-control",  })
+                                                        @Html.ValidationMessageFor(x => x.uyeSoyadi,"", new { @class = "text-danger", })
+                                                        @*<input class="form-control " required id="inputLastName" type="text" placeholder="Enter your last name" name="uyeSoyadi" />*@
+                                                        <label for="inputLastName">Last name</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                @Html.TextBoxFor(x => x.email, new { @class = "form-control", @type = "email" })
+                                                @Html.ValidationMessageFor(x => x.email, "", new { @class = "text-danger", })
+                                                @*<input class="form-control " required id="inputEmail" type="email" placeholder="name@example.com" name="email" />*@
+                                                <label for="inputEmail">Email address</label>
+                                            </div>
+
+
+
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        @Html.TextBoxFor(x => x.telNo,  new { @class = "form-control",  })
+                                                        @Html.ValidationMessageFor(x => x.telNo, "", new { @class = "text-danger", })
+                                                        @*<input class="form-control " required id="inputPasswordConfirm" maxlength="11" type="text" placeholder="Confirm password" name="telNo" />*@
+                                                        <label for="inputPasswordConfirm">Mobile Number</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        @Html.TextBoxFor(x => x.parola,  new { @class = "form-control", type = "password"})
+                                                        @Html.ValidationMessageFor(x => x.parola, "", new { @class = "text-danger", })
+                                                        @*<input class="form-control " required id="inputPassword" type="password" placeholder="Create a password" name="email" />*@
+                                                        <label for="inputPassword">Password</label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="mt-4 mb-0">
+                                                <div class="d-grid">
+                                                    <button type="submit" class="btn btn-primary btn-block ">Create Account</button>
+                                                    <!--<a class="btn btn-primary btn-block" type="button" href="/Kullanici/KullaniciLogIn/">Create Account</a>-->
+                                                </div>
+                                            </div>
+                                            <!--</form>-->
+                                        }
+                                    </div>
+                                    <div class="card-footer text-center py-3">
+                                        <div class="small"><a href="/LogIn/KullaniciLogIn/">Have an account? Go to login</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/scripts.js"></script>

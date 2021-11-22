@@ -1,0 +1,8 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Kategori>
+
+
+@foreach (var item in Model)
+{
+    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>&nbsp;@item.kategoriAdi</label>
+    <br />
+}

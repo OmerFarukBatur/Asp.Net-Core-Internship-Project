@@ -1,0 +1,16 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Proje>
+
+
+    @foreach (var item in Model)
+    {
+        <div  class="col-lg-4 col-sm-6">
+            <div class="single_product_item">
+                <img src="~/img/@item.resimURL.ToString()" alt="">
+                <div class="single_product_text">
+                    <h4>@item.projeAdi</h4>
+                    @await Component.InvokeAsync("MaliyetList", item.projeID)
+                    <a href="/LogIn/KullaniciLogIn" class="add_cart">To Apply<i class="bi bi-arrow-right-square-fill"></i></a>
+                </div>
+            </div>
+        </div>
+    }

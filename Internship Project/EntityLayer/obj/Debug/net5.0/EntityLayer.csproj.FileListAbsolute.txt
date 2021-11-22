@@ -1,0 +1,30 @@
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\bin\Debug\net5.0\EntityLayer.deps.json
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\bin\Debug\net5.0\ref\EntityLayer.dll
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfo.cs
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.dll
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\bin\Debug\net5.0\EntityLayer.runtimeconfig.json
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\bin\Debug\net5.0\EntityLayer.runtimeconfig.dev.json
+C:\Users\OmerF\source\repos\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.genruntimeconfig.cache
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\bin\Debug\net5.0\EntityLayer.deps.json
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\bin\Debug\net5.0\EntityLayer.runtimeconfig.json
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\bin\Debug\net5.0\EntityLayer.runtimeconfig.dev.json
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\bin\Debug\net5.0\ref\EntityLayer.dll
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfo.cs
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.dll
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\EntityLayer\obj\Debug\net5.0\EntityLayer.genruntimeconfig.cache

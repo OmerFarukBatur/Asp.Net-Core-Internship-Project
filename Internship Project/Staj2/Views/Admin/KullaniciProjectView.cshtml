@@ -1,0 +1,50 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Proje>
+
+@{
+    ViewData["Title"] = "KullaniciProjectView";
+    Layout = "~/Views/Shared/KullaniciAdmin/_KullaniciAdminLogged.cshtml";
+}
+
+
+<section class="cat_product_area section_padding">
+    <div class="container">
+        <h2 class="text-center text-heading">Your Project</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Detail</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Setting</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.projeID</td>
+                            <td>@item.projeAdi</td>
+                            <td>@item.Kategori.kategoriAdi</td>
+                            <td>@item.projeDetaylari</td>
+                            <td>@item.projeDurumu</td>
+                            @await Component.InvokeAsync("MaliyetListProject", item.projeID)
+
+                            <td>
+                                <!-- <a href="#" class="view" title="" data-toggle="tooltip" data-original-title="View"><i class="far fa-eye"></i></a>&nbsp; -->
+                                <a href="/Admin/KullaniciProjectEdit/@item.projeID/" class="edit" title="" data-toggle="tooltip"
+                                   data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a>&nbsp;
+                                <a href="/Admin/KullaniciProjectDelete/@item.projeID/" class="delete" title="" data-toggle="tooltip"
+                                   data-original-title="Delete"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

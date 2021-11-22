@@ -1,0 +1,115 @@
+﻿@model EntityLayer.Concrete.Uye
+@{
+    ViewData["Title"] = "KullaniciAdminSetting";
+    Layout = "~/Views/Shared/KullaniciAdmin/_KullaniciAdminLogged.cshtml";
+}
+
+@using (Html.BeginForm("KullaniciAdminSetting", "Admin", FormMethod.Post@*, new { @class = "form-horizontal" }*@))
+{
+<form>
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <img width="150" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" class="picture-src rounded-circle mt-5 " id="profileImage1" title="">
+
+                <input type="file" id="profileImage2" class="">
+                <!--<div class="d-flex flex-column align-items-center text-center p-3 py-5"><!--<img id="profileImage" class="rounded-circle mt-5" width="150" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>-->
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings</h4>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="Name" class="form-label">Name</label>
+                            @Html.TextBoxFor(x => x.uyeAdi, new { @class = "form-control", @type = "text" })
+                            @Html.ValidationMessageFor(x => x.uyeAdi, "", new { @class = "text-danger", })
+                            @*<input type="text" class="form-control validate" id="name" placeholder="name" value="" required>*@
+
+
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Surname" class="form-label">Surname</label>
+                            @Html.TextBoxFor(x => x.uyeSoyadi, new { @class = "form-control", @type = "text" })
+                            @Html.ValidationMessageFor(x => x.uyeSoyadi, "", new { @class = "text-danger", })
+                            @*<input type="text" class="form-control validate" id="surName" placeholder="surname" value="" required>*@
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <label for="mobile number" class="form-label">Mobile Number</label>
+                            @Html.TextBoxFor(x => x.telNo, new { @class = "form-control", @type = "text" })
+                            @Html.ValidationMessageFor(x => x.telNo, "", new { @class = "text-danger", })
+                            @*<input type="text" class="form-control validate" id="mobileNumber" placeholder="enter phone number" value="" required>*@
+                        </div>
+                        <div class="col-md-12">
+                            <label for="address" class="form-label">Password</label>
+                            @Html.PasswordFor(x => x.parola, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.parola, "", new { @class = "text-danger", })
+                            @*<input type="text" class="form-control validate" id="Address" placeholder="enter address" value="" required>*@
+                        </div>
+                        <div class="col-md-12">
+                            <label for="email" class="form-label">Email</label>
+                            @Html.TextBoxFor(x => x.email, new { @class = "form-control", @type = "text" })
+                            @Html.ValidationMessageFor(x => x.email, "", new { @class = "text-danger", })
+                            @*<input type="email" class="form-control validate" id="Email" placeholder="you@example.com" value="" required>*@
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+
+                    </div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Save Profile</button></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                @*<div class="p-3 py-5">
+                        <label for="Slevel">
+                            Skill & Level
+                        </label>
+                        @for (var i = 0; i < 5; i++)
+                        {
+                            <div multiple class="form-check">
+
+                                <input class="form-check-input" type="checkbox" value="" id="skill">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Deneme
+                                </label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <select class="custom-select tm-select-accounts"
+                                        id="level">
+                                    <option selected>Requirement Level</option>
+                                    <option value="1">New Arrival</option>
+                                    <option value="2">Most Popular</option>
+                                    <option value="3">Trending</option>
+                                </select>
+                            </div>
+                        }
+                    </div>*@
+            </div>
+        </div>
+    </div>
+</form>
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+
+<script language="javascript">
+    $(document).ready(function () {
+        // Prepare the preview for profile picture
+        $("#profileImage2").change(function () {
+            readURL(this);
+        });
+    });
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#profileImage1').attr('src', e.target.result).fadeIn('slow');
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

@@ -1,0 +1,80 @@
+﻿@model EntityLayer.Concrete.Iletisim
+@{
+    ViewData["Title"] = "ProjectPost";
+    Layout = "~/Views/Shared/KullaniciInterface/_KullaniciLayout.cshtml";
+}
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<section class="cat_product_area section_padding">
+    <div class="container">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Send Project</h3></div>
+                                    <div class="card-body">
+                                        @using (Html.BeginForm("ProjectPost", "Iletisim", FormMethod.Post))
+                                        {
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        @Html.TextBoxFor(x => x.ad, new { @class = "form-control", })
+                                                        @Html.ValidationMessageFor(x => x.ad, "", new { @class = "text-danger", })
+                                                        <label for="inputFirstName">First name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating">
+                                                        @Html.TextBoxFor(x => x.soyad, new { @class = "form-control", })
+                                                        @Html.ValidationMessageFor(x => x.soyad, "", new { @class = "text-danger", })
+                                                        <label for="inputLastName">Project name</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3">
+                                                        @Html.TextBoxFor(x => x.email, new { @class = "form-control", @type = "email" })
+                                                        @Html.ValidationMessageFor(x => x.email, "", new { @class = "text-danger", })
+                                                        <label for="inputEmail">Email address</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="imageUpload">Upload file</label>
+                                                        @Html.TextBoxFor(x => x.resimURL, new { @class = "form-control", @type = "file" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        @Html.TextAreaFor(x => x.mesaj, 15, 3, new { @class = "form-control", })
+                                                        @Html.ValidationMessageFor(x => x.mesaj, "", new { @class = "text-danger", })
+                                                        <label for="inputPasswordConfirm">Project Description</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-4 mb-0">
+                                                <div class="d-grid">
+                                                    <button type="submit" class="btn btn-primary btn-block ">Send</button>
+                                                    <!--<a class="btn btn-primary btn-block" type="button" href="/Kullanici/KullaniciLogIn/">Create Account</a>-->
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/scripts.js"></script>
+

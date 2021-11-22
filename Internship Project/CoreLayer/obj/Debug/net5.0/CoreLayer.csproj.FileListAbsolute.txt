@@ -1,0 +1,24 @@
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\bin\Debug\net5.0\CoreLayer.deps.json
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\bin\Debug\net5.0\CoreLayer.dll
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\bin\Debug\net5.0\ref\CoreLayer.dll
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\bin\Debug\net5.0\CoreLayer.pdb
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.csproj.AssemblyReference.cache
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.AssemblyInfoInputs.cache
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.AssemblyInfo.cs
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.csproj.CoreCompileInputs.cache
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.dll
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\obj\Debug\net5.0\ref\CoreLayer.dll
+C:\Users\OmerF\source\repos\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.pdb
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\bin\Debug\net5.0\CoreLayer.deps.json
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\bin\Debug\net5.0\CoreLayer.dll
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\bin\Debug\net5.0\ref\CoreLayer.dll
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\bin\Debug\net5.0\CoreLayer.pdb
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.csproj.AssemblyReference.cache
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.AssemblyInfoInputs.cache
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.AssemblyInfo.cs
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.csproj.CoreCompileInputs.cache
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.dll
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\obj\Debug\net5.0\ref\CoreLayer.dll
+C:\Users\OmerF\source\repos\çöp oldu\Staj2\CoreLayer\obj\Debug\net5.0\CoreLayer.pdb

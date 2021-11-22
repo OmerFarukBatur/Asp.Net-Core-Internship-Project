@@ -1,0 +1,218 @@
+﻿
+@{
+    ViewData["Title"] = "KullaniciTeamCreate";
+    Layout = "~/Views/Shared/KullaniciAdmin/_KullaniciAdminLogged.cshtml";
+}
+<link href="~/tag/bootstrap-tagsinput.css" rel="stylesheet" crossorigin="anonymous" />
+
+@*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />*@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js" integrity="sha512-9UR1ynHntZdqHnwXKTaOm1s6V9fExqejKvg5XMawEMToW4sSw+3jtLrYfZPijvnwnnE8Uol1O9BcAskoxgec+g==" crossorigin="anonymous"></script>
+
+@*<style>
+        .tagsinput {
+            line-height: 15px !important;
+            min-height: 165px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: black;
+        }
+
+        .tagsinput {
+            position: relative;
+            float: left;
+            height: auto;
+            margin-top: 4px;
+            margin-left: 5px;
+            padding: 0px;
+            text-align: left;
+            width: auto;
+        }
+
+            .tagsinput.tag {
+                background: red;
+                padding: 4px;
+                font - size: 14px;
+            }
+    </style>*@
+
+
+
+<section class="cat_product_area section_padding">
+    <div class="container tm-mt-big tm-mb-big">
+        <div class="row">
+            <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto ">
+                <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="tm-block-title d-inline-block">Add Team</h2>
+                        </div>
+                    </div>
+                    <div class="row tm-edit-product-row">
+                        <div class="col-xl-6 col-lg-6 col-md-12">
+                            <form action="" class="tm-edit-product-form">
+
+                                <div class="form-group mb-3">
+                                    <div class="row">
+                                        <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                            <label for="project name">Project Name</label>
+                                        </div>
+
+                                        <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                            <input class="form-control" list="projectName" id="pName1" placeholder="Type to search...">
+                                            <datalist id="projectName">
+                                                <option value="San Francisco"></option>
+                                                <option value="New York"></option>
+                                                <option value="Seattle"></option>
+                                                <option value="Los Angeles"></option>
+                                                <option value="Chicago"></option>
+                                            </datalist>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group mb-3">
+                                    <div class="row">
+                                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                            <label for="position name">Position Name</label>
+
+                                        </div>
+
+                                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                            <label for="position level">Position Level</label>
+                                        </div>
+
+                                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                            <input class="form-control" list="positionName" id="position1" placeholder="Type to search...">
+                                            <datalist id="positionName">
+                                                <option value="San Francisco"></option>
+                                                <option value="New York"></option>
+                                                <option value="Seattle"></option>
+                                                <option value="Los Angeles"></option>
+                                                <option value="Chicago"></option>
+                                            </datalist>
+                                        </div>
+                                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                            <input class="form-control" list="positionLevel" id="position2" placeholder="Type to search...">
+                                            <datalist id="positionLevel">
+                                                <option value="San Francisco"></option>
+                                                <option value="New York"></option>
+                                                <option value="Seattle"></option>
+                                                <option value="Los Angeles"></option>
+                                                <option value="Chicago"></option>
+                                            </datalist>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group mb-3">
+                                    <div class="row">
+                                        <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                            <label for="category name">Applicant Name</label>
+                                        </div>
+
+                                        <div class="form-group mb-3 col-xs-12 col-sm-12">
+                                            <input class="form-control" list="categoryName" id="cName1" placeholder="Type to search...">
+                                            <datalist id="categoryName">
+                                                <option value="San Francisco"></option>
+                                                <option value="New York"></option>
+                                                <option value="Seattle"></option>
+                                                <option value="Los Angeles"></option>
+                                                <option value="Chicago"></option>
+                                            </datalist>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    
+                                    <input type="button" onclick="msg()" value="Add">
+                                </div>
+
+
+
+
+                                <div class="form-group mb-3">
+                                    <div class="row">
+                                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                            <label for="bid">
+                                                <b>Bid:</b>
+                                            </label>&nbsp;&nbsp;&nbsp;
+                                            <a>20£</a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-12">
+                                    <div class="col-12">
+                                        <button type="button" class="btn btn-primary btn-block text-uppercase">Add Team</button>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+
+                            <div class="card border-primary border-5">
+                                <input type="text" class="form-control" name="city" id="tags-input" data-role="tagsinput" />
+
+                                
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    function msg() {
+        //$(document).ready(function () {
+        //    var tagInputEle = $('#deneme');
+        //    tagInputEle.tagsinput();
+        //});
+        var Id,Text;
+            $('#categoryName').change(function () {
+
+                Id = $(this).val().toString();
+               Text = $(this).text().toString();
+            });
+        var mytagsinput = $('#tagsinput');
+
+        //initialize
+        mytagsinput.tagsinput({
+            allowDuplicates: false,
+            tagClass: 'label label-primary',
+            itemValue: 'id',
+            itemText: 'text'
+        });
+
+        //add my tags object
+        /*mytagsinput.tagsinput('add', Text);*/
+   
+        mytagsinput.tagsinput('add', { "value": 1, "text": "Amsterdam", "continent": "Europe" });
+        mytagsinput.tagsinput('add', { "value": 4, "text": "Washington", "continent": "America" });
+        mytagsinput.tagsinput('add', { "value": 7, "text": "Sydney", "continent": "Australia" });
+        mytagsinput.tagsinput('add', { "value": 10, "text": "Beijing", "continent": "Asia" });
+        mytagsinput.tagsinput('add', { "value": 13, "text": "Cairo", "continent": "Africa" });
+
+
+        //$(document).ready(function () {
+        //    // ülke seçildiğinde bu fonksiyon çalışır
+        //    $('#kategoriID').change(function () {
+        //        // seçilen ülkenin id sini al
+        //        var Id = $(this).val())};
+              
+        //        alert(Id)};
+    }
+</script>
